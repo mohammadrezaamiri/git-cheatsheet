@@ -1,45 +1,125 @@
-# هدف از این ریپازیتوری
-هدف از این ریپازیتوری ثبت پاسخ های من به سوالات تمرین گیت در دوره آموزشی دوآپس با سعید ، با آموزش آقای سعید بستان دوست می باشد
 
-## چطوری از این ریپازیتوری استفاده کنم ؟
-صرفا با مطالعه این توضیحات شما از این ریپازیتوری استفاده کرده اید 
-که البته می توانید پاسخ های خود به سوالات را در یک برنچ دیگه ارسال کنید
-تا بنده رو در فهم بهتر این مسائل کمک کرده باشید
+# DWS-dev-004
 
-## سوالات
-## 1.	چرا از ابزارهای کنترل ورژن مثل گیت استفاده می کنیم ؟ 
-با اون ها میایم سورس برنامه مون رو مدیریت می کنیم در واقع یک پایگاهی برای نگهداری سورس برنامه و مدیریت ورژن برنامه مون هست . 
+Work with git
 
-## 2.	ریپوزیتوری چیست ؟ یک ریپوزیتوری خوب دارای چه فایل های مهمی می باشد ؟ 
-فضایی است که در سیستم های کنترل ورژن در اختیار ما است که سورس برنامه مون رو در این فضا مدیریت کنیم که شامل دو قسمت لوکال (کلاینت) و ریموت (سرور) هست . و هر ریپازیتوری باید فایل های license  ، readme  و gitignore  رو داشته باشه
+## Question1: why we use git version-control?
 
-## 3.	یک داکیومنت خوب از چه بخش هایی تشکیل شده است ؟
-از سه بخش تشکیل شده . توضیح اینکه برای چی درست شده ، چطوری من ازش استفاده کنم ، اگر کسی بخواد داخلش کمک بکنه چطوری باید کمک بکنه 
+answer: for control program source and git is a Database for keep source and versioning 
 
-## 4.	دستور git clone  چه کاری انجام می دهد ؟ 
-محتوای سورس رو از ریموت به لوکال انتقال میده
+## Question2: What is Repository? What important files does a good repository have?
 
-## 5.	اگر بخواهیم لوکال ریپازیتوری را با ریموت ریپازیتوری بروز کنیم چه دستوری باید اجرا شود ؟
-Git pull origin [branch name] که البته قبلش نباید چیزی در فضای unstage و یا stage  باشه
+answer:
+ - Repository is a storage for keep commits ,Branches, tags, files and ...
 
-## 6.	تفاوت checkout  ، Revert ، Reset چیست ؟
-Git checkout  حرکت شما بین برنچ ها رو مدیریت میکنه ، git revert میاد کامیتی رو که شما میخواید رو به عنوان یک کامییت جدید ایجاد میکنه و حین اینکه شما به کامیت مورد نظرتون میرید کامیت های این بین از بین نمیره ، گیت ریسیت شما رو به کامیت مورد نظرتون میبره ولی بعد از اعمال تغییرتون کامیت های این بین از بین میره. 
 
-## 7.	تفاوت merge  با rebase چیست ؟ 
-شما merge  که می کنید خود merge به عنوان یک  commitجدا در نظر گرفته میشه ولی rebase که میکنید میاد commit  های branch فرع رو بعد از اون commit  ، branch  اصل که از اونجا فرع درست شد قرار میده و commit جدایی برای این ترکیب قائل نمیشه
+- .gitignore/readme.md/LICENSE
 
-## 8.	برای دیدن تاریخچه کامییت ها از چه دستوری استفاده می شود ؟ 
-گیت لاگ
 
-## 9.	اگر بخواهیم تغییرات یک فایل را ببینیم از چه دستوری استفاده می کنیم ؟
-گیت دیف
+## Question3: What are the parts of a good document?
+answer:
+- 1. What does the project do and what is it made for?
 
-## 10.	کاربرد tag چیست ؟ چگونه میتوان یک Tag ساخت ؟ 
-معمولا برای نشان کردن جهت ورژن بندی استفاده میشه. Git tag [version]
+- 2.How to use the project?
 
-## 11.	برای مشارکت در یک پروژه که با گیت مدیریت می شود چه فرآیندی را باید طی کرد ؟
-باید سورس پروژه رو کلون کنیم برنچ خودمون رو درست کنیم توسعه رو که انجام دادیم برنچ رو در ریپازیتوری ریموت پوش کنیم و بعد برای یکی شدن با برنچ اصلی درخواست بدهیم 
+- 3.What should someone do if they want to help with the project?
 
-## 12.	برنچ ها برای چه منظوری استفاده می شوند و چگونه می توان آن ها را با هم ادغام کرد ؟
-برای رفع یک باگ یا برای کار روی یک ریلیز خاص و یا برای یک ویژگی جدید از برنچ استفاده می کنیم. 
-مثلا برای اینکه بخوایم برنج dev رو با برنچ master ادغام کنیم ابتدا تمام تغییرات unstage برنچ dev رو Stage  میکنیم سپس اونا رو کامیت میکنیم و بعد از کامیت به برنج master رفته یا با ریبیس و یا با مرج برنچ  dev را در master ادغام میکنیم
+## Question4: What does the 'git-clone' command do?
+answer:
+- Used to take a complete sample of the project.
+
+## Question5: What command should be executed if we want to update the local repository with the remote repository?
+
+answer:
+- we sould use this command
+
+```git-bash
+git pull
+```
+
+## Question6: What is deference between 'checkout','revert','reset'?
+answer:
+- ### checkout :
+     for transfer between branches
+```git-bash
+git checkout <branch-name>
+```
+- ### revert:
+lose changes and add new commit
+```git-bash
+git revert <commit>
+```
+- ### reset:
+keep changes and just remove commit
+```git-bash
+git reset <commit>
+```
+
+## Question7: What is deference between 'merge' and 'rebase'?
+answer:
+- ### merge:
+     add new commit and merge current changes with specific branch
+```git-bash
+git merge --no-ff <branch-name1> <branch-name2>
+```
+- ### rebase:
+sort-changes and Stick together.
+```git-bash
+git rebase
+```
+## Question8: What command is used to view the history of commits?
+answer:
+
+```git-bash
+git log
+```
+## Question9: What command do we use if we want to see changes to a file?
+answer:
+```git-bash
+git diff
+```
+```git-bash
+git show
+```
+
+## Question10: What is the use of tag? How to create a tag?
+answer:
+for get release of after update or after stable project 
+
+```git-bash
+git tag
+```
+## Question11: What is the process to participate in a git-managed project?
+answer:
+- 1. clone project to our local system
+- 2. create local-branch
+- 3. add changes
+- 4. commit changes
+- 5. checkout to dev or master
+- 6. merge local-branch with remote branch
+- 7. pull from remote branch
+- 8. fix conflicts 
+- 9. push to remote branch
+
+
+## Question12: What are the uses of the branches and how can they be integrated?
+answer:
+for apply specific changes in project
+
+with 2 below command:
+
+```git-bash
+git merge
+```
+```git-bash
+git rebase
+```
+
+## Author:
+
+mohammadreza amiri
+
+all right reserved for my dear friend sajjad maneshi
+
+[@dwsclass](https://github.com/dwsclass)dws-dev-004-git
+
